@@ -1,17 +1,33 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import { useState, useEffect } from 'react';
+import getPopularFilms from "servises/getPopularFilms";
 
 const Home = () => {
-    return <div>{['Popfilm-1', 'Popfilm-2', 'Popfilm-3'].map(film => {
-        return (
-            <Link key={film} to={`${film}`}>
-                {film}
-            </Link>
-    )})}</div>
 
-    // Юз эффект и запрос 28 мин. 1 видео
-    // фильм в шаблонной строке - это то, что будет подставляться в юрл
+    const [popularFilms, setPopularFilms] = useState([]);
+
+    useEffect(() => { 
+        getPopularFilms().then(film => { setPopularFilms(film.data.results) })
+    }, []);
+
+// console.log(popularFilms)
+
+    return  (
+        <>
+            <h1>Trending today</h1>
+            <ul>
+                {popularFilms.map(popularFilm => (
+                    <li key={popularFilm.id}>
+                        <Link to={`/movies/${popularFilm.id}`}>
+                            {popularFilm.title}
+                        </Link> 
+                    </li>         
+                ))}   
+            </ul>
+
+        </>
+
+    )
 }
-
-
 
 export default Home
