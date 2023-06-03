@@ -1,15 +1,18 @@
 import { useState, useEffect } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useLocation  } from "react-router-dom";
 import { useSearchParams } from 'react-router-dom';
 import Searchbar from "components/SearchFilm/SearchFilm"
 import getSearchMovies from 'servises/getSearchMovies';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import css from './movies.module.css'
 
 
 const Movies = () => {
 
     const [searchQuery, setsearchQuery] = useState('');
     const [movies, setMovies] = useState('');
+
+    const location = useLocation();
 
     const [searchParams, setSearchParams] = useSearchParams();
 
@@ -39,8 +42,6 @@ const Movies = () => {
     };
 
 
-    
-
 
 
     useEffect(() => {
@@ -48,7 +49,11 @@ const Movies = () => {
             getSearchMovies(paramMovieSearch).then(movies => {
                 setMovies(movies.data.results);
                 
-        });
+                if (movies.data.results.length === 0) {
+                    Notify.info('Ooops! No search! Try again.'); 
+            }
+            })
+
     }
         setMovies('');
   }, [paramMovieSearch]);
@@ -57,16 +62,15 @@ const Movies = () => {
 // console.log(movies)
 
 
- 
     return (
         <>
             <Searchbar value={searchQuery} onChange={setsearchQuery} onClick={handleClick} />
 
             {movies &&
-                ( <ul>
+                ( <ul className={css.searchMovieList}>
                     {movies.map(movie => (
-                        <li key={movie.id}>
-                            <Link to={`/movies/${movie.id}`}>
+                        <li key={movie.id} className={css.searchMovieItem}>
+                            <Link to={`/movies/${movie.id}`} state={{ from: location }} className={css.searchMovieLink}>
                                 {movie.title}
                             </Link>
                         </li>

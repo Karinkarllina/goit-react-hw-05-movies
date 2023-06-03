@@ -1,0 +1,18 @@
+.searchMovieList {
+    list-style: inside;
+}
+
+.searchMovieItem {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Oxygen';
+}
+
+.searchMovieLink {
+    color: rgb(56, 55, 60);
+}
+
+.searchMovieLink:hover,
+.searchMovieLink:focus {
+    color: rgb(255, 71, 92)
+}

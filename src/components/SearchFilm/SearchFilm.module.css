@@ -1,0 +1,23 @@
+.inputMovieWrap {
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+.inputMovieSerach {
+    width: 250px;
+    height: 20px;
+    border: 1px  rgb(114, 71, 255);
+        box-shadow: 0px 2px 4px -1px rgb(114, 71, 255),
+            0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.inputMovieButton {
+    padding: 3px 12px;
+    margin-left: 12px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: rgb(114, 71, 255) 5px 5px 5px 0px;
+
+}
+
+

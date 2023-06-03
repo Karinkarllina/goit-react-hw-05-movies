@@ -1,0 +1,13 @@
+.actorName {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Oxygen';
+}
+
+.actorCharacter {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Oxygen';
+    margin-bottom: 25px;
+
+}

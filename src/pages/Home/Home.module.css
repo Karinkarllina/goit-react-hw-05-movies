@@ -1,0 +1,27 @@
+.homeTitle {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Oxygen';
+    color: rgb(36, 3, 142);
+    margin-left: 30px;
+}
+
+.homeTerndingList {
+    list-style: inside;
+}
+
+.homeTerndingItem {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Oxygen';
+    
+}
+
+.homeTerndingLink {
+color: rgb(56, 55, 60);
+}
+
+.homeTerndingLink:hover,
+.homeTerndingLink:focus {
+    color: rgb(255, 71, 92)
+}

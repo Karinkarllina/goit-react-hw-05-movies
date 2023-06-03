@@ -1,0 +1,76 @@
+.movieFlexWrap {
+    display: flex;
+    flex-direction: row;
+}
+
+.movieInfo {
+    margin-left: 25px ;
+}
+
+.movieScore {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Oxygen';
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.movieOverview {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Oxygen';
+}
+
+.movieGenres {
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'Oxygen';
+}
+
+.movieAdditionalInfo {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Oxygen';
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.movieAdditionalInfoItem {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Oxygen';
+}
+
+.movieAdditionalInfoList {
+    list-style: inside;
+}
+
+.movieAdditionalInfoLink{
+    color: rgb(56, 55, 60);
+}
+
+.movieAdditionalInfoLink:hover,
+.movieAdditionalInfoLink:focus {
+    color: rgb(255, 71, 92)
+}
+
+.buttonBack {
+    margin-left: 40px;
+    padding: 3px 12px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: rgb(114, 71, 255) 5px 5px 5px 0px;
+}
+
+.movieimg {
+    box-shadow: rgb(110, 108, 108) 5px 5px 5px 0px;
+}
+
+.movieAdditionalInfoWrap {
+    box-shadow: 4px 3px 4px -1px rgb(114, 71, 255),
+    4px 4px 5px 3px rgba(0, 0, 0, 0.14), 4px 3px 10px 4px rgba(0, 0, 0, 0.12);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 40px;
+}
