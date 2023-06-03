@@ -47,7 +47,7 @@ const Movies = () => {
     useEffect(() => {
         if (paramMovieSearch !== '') {
             getSearchMovies(paramMovieSearch).then(movies => {
-                setMovies(movies.data.results);
+                setMovies(movies.data.results); 
                 
                 if (movies.data.results.length === 0) {
                     Notify.info('Ooops! No search! Try again.'); 
