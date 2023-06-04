@@ -9,15 +9,16 @@ import css from './movies.module.css'
 
 const Movies = () => {
 
-    const [searchQuery, setsearchQuery] = useState('');
+
+    const [searchParams, setSearchParams] = useSearchParams();
+    const paramMovieSearch = searchParams.get('movieSearch') ?? '';
+    
+    const [searchQuery, setsearchQuery] = useState(paramMovieSearch);
     const [movies, setMovies] = useState('');
 
     const location = useLocation();
 
-    const [searchParams, setSearchParams] = useSearchParams();
-
-
-    const paramMovieSearch = searchParams.get('movieSearch') ?? '';
+ 
     // console.log(movieSearch)
 
     
@@ -29,7 +30,7 @@ const Movies = () => {
         }
         // console.log(searchQuery)
         updateQueryString(searchQuery);
-        setsearchQuery('');
+        // setsearchQuery('');
     }
 
 
